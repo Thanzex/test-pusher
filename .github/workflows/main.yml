@@ -52,7 +52,7 @@ jobs:
         with:
           valueFile: 'app/values.yaml'
           propertyPath: 'image.tag'
-          value: ${{ steps.build.outputs.tag }}
+          value: ${{ needs.build.outputs.tag }}
           repository: Thanzex/test-infra
           branch: main
           targetBranch: main
