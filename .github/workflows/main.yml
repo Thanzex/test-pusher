@@ -45,7 +45,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: Thanzex/test-infra
-          token: ${{ secrets.GITHUB_TOKEN }} 
+          token: ${{ secrets.TOKEN }} 
 
       - name: Update Image Version in the related HelmChart values.yaml
         uses: fjogeleit/yaml-update-action@master
@@ -57,4 +57,4 @@ jobs:
           branch: main
           targetBranch: main
           message: 'Update Image Version to ${{ steps.build.outputs.tag }}'
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.TOKEN }}
